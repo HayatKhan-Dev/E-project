@@ -1,0 +1,35 @@
+.loader {
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateY(-100%);
+}
+
+.loader-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    font-size: var(--fs-4xl);
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    color: var(--clr-primary);
+}
+
+.loader-overlay i {
+    color: var(--text);
+}
+
+.pulse {
+    background-color: white;
+    height: 4px;
+    width: 0%;
+    position: relative;
+    left: 0%;
+}
