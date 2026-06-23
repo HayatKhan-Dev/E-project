@@ -51,7 +51,7 @@
 }
 
 .text-brand {
-    color: var(--brand) !important;
+    color: var(--clr-primary) !important;
 }
 
 .clr-primary {
@@ -128,3 +128,4 @@
 .text-color {
     color: var(--text)
 }
+

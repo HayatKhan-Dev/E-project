@@ -1,0 +1,47 @@
+@media (max-width: 991px) {
+
+    .about {
+        text-align: center;
+    }
+
+    .about-content {
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-statistics {
+        justify-content: center;
+    }
+
+     .oral-health {
+        text-align: center;
+    }
+
+    .oral-content {
+        align-items: center;
+    }
+
+    .oral-text {
+        max-width: 100%;
+    }
+
+    .oral-points {
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .research-heading {
+        font-size: var(--fs-2xl);
+    }
+
+    .research-subheading {
+        font-size: var(--fs-sm);
+    }
+
+}
