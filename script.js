@@ -396,7 +396,145 @@ function testimonialsAnimation() {
     ease: "power3.out"
   }, "-=.2");
 
+  faqAnimation()
 }
+
+function faqAnimation() {
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".faq",
+      start: "top 70%",
+      end: "bottom 20%",
+      toggleActions: "play none none reset"
+    }
+  });
+
+  // Heading
+  tl.from(".faq-heading", {
+    opacity: 0,
+    y: 40,
+    duration: 0.7,
+    ease: "power2.out"
+  })
+
+  // Subheading
+  .from(".faq-subheading", {
+    opacity: 0,
+    y: 25,
+    duration: 0.6,
+    ease: "power2.out"
+  }, "-=0.3")
+
+  // Accordion Items
+  .from(".accordion-item", {
+    opacity: 0,
+    y: 60,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: "power3.out"
+  }, "-=0.2");
+
+  footerAnimation();
+}
+
+function footerAnimation() {
+
+  const footerTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "top 80%",
+      toggleActions: "play none none reset"
+    }
+  });
+
+  footerTl.from(".footer-brand", {
+    opacity: 0,
+    x: -50,
+    duration: 0.8
+  });
+
+  footerTl.from(".footer-links, .footer-contact", {
+    opacity: 0,
+    y: 40,
+    stagger: 0.2,
+    duration: 0.8
+  }, "-=0.4");
+
+  footerTl.from(".footer-bottom", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8
+  });
+
+  footerTl.to(".footer-socials i", {
+    opacity: 1,
+    scale: 1,
+    stagger: 0.1,
+    duration: 0.7
+  }, "-=0.4");
+
+}
+
+// geolocation API for the map
+function getUserLocation () {
+  if (!navigator.geolocation) {
+    alert("your brower doesn't support geolocation");
+    return;
+  }
+
+  const successCallBack = position => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    // leaflet Map
+    let map = L.map('map');
+    map.setView([latitude, longitude], 16);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([latitude, longitude]).addTo(map).bindPopup("📍 You are here").openPopup();
+  }
+
+  const errorCallback = (error) => {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        console.error("User denied the request for Geolocation.");
+        break;
+      case error.POSITION_UNAVAILABLE:
+        console.error("Location information is unavailable.");
+        break;
+      case error.TIMEOUT:
+        console.error("The request to get user location timed out.");
+        break;
+      default:
+        console.error("An unknown error occurred.");
+        break;
+    }
+  };
+
+  navigator.geolocation.getCurrentPosition(successCallBack, errorCallback)
+}
+
+getUserLocation()
+
+gsap.utils.toArray(".accordion-item").forEach(item => {
+
+  item.addEventListener("mouseenter", () => {
+    gsap.to(item, {
+      y: -5,
+      duration: 0.25
+    });
+  });
+
+  item.addEventListener("mouseleave", () => {
+    gsap.to(item, {
+      y: 0,
+      duration: 0.25
+    });
+  });
+
+});
 
 gsap.to(".testimonial-profile img", {
   y: -8,

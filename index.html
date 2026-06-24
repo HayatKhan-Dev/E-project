@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/utitlities.css" />
   <link rel="stylesheet" href="css/loader.css">
@@ -537,6 +538,232 @@
 
       </div>
     </section>
+
+    <section class="faq">
+      <div class="container">
+
+        <div class="faq-header">
+          <h2 class="faq-heading">Frequently Asked Questions</h2>
+          <p class="faq-subheading">
+            Find answers to common questions about oral health, dental care, and hygiene.
+          </p>
+        </div>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                How often should I brush my teeth?
+              </button>
+            </h2>
+
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Dentists recommend brushing at least twice daily using fluoride toothpaste.
+              </div>
+
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                How often should I visit a dentist?
+              </button>
+            </h2>
+
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Most dentists recommend a professional checkup every six months.
+              </div>
+
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                What causes cavities?
+              </button>
+            </h2>
+
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Cavities are caused by plaque buildup, bacteria, sugary foods, and poor oral hygiene.
+              </div>
+
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Is flossing really necessary?
+              </button>
+            </h2>
+
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. Flossing removes plaque and food particles from areas your toothbrush cannot reach.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Can oral health affect overall health?
+              </button>
+            </h2>
+
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Yes. Poor oral health has been linked to heart disease, diabetes, and other health conditions.
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+
+        <div class="contact-header">
+          <h2 class="contact-heading">
+            Find Dental Assistance Near You
+          </h2>
+          <p class="contact-subheading">
+            Connect with professionals, locate clinics, and get guidance for your oral health journey.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+          <!-- Left Side -->
+          <div class="col-lg-4">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-tooth"></i>
+              </div>
+              <h3>Contact Information</h3>
+              <p>
+                Reach out to our dental professionals for guidance, support, and appointments.
+              </p>
+              <div class="contact-info">
+                <div class="info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+92 300 1234567</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>info@32smiles.com</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Karachi, Pakistan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Map -->
+          <div class="col-lg-8">
+            <div class="map-wrapper">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Cards -->
+
+        <div class="row g-4 contact-stats">
+
+          <div class="col-md-4">
+            <div class="contact-mini-card">
+              <h4>100+</h4>
+              <span>Partner Clinics</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-mini-card">
+              <h4>20+</h4>
+              <span>Dental Experts</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-mini-card">
+              <h4>5000+</h4>
+              <span>Patients Guided</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-top">
+
+          <div class="footer-brand">
+            <h2>32 Smiles</h2>
+            <p>Trusted dental education, research, and oral health resources for
+              patients, students, and professionals.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <div class="footer-links">
+            <h4>Resources</h4>
+
+            <a href="#">Research</a>
+            <a href="#">Products</a>
+            <a href="#">FAQ</a>
+            <a href="#">Education</a>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+
+            <p>Email: info@32smiles.com</p>
+            <p>Phone: +92 300 1234567</p>
+            <p>Karachi, Pakistan</p>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 32 Smiles. All rights reserved.</p>
+
+          <div class="footer-socials">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+
+      </div>
+    </footer>
   </main>
 
   <div class="loader">
@@ -552,6 +779,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
     integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
   <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
