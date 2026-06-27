@@ -20,6 +20,64 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+// Progress Bar code and logic 
+function progressBar() {
+  gsap.to(".scroll-progress", {
+    width: "100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true
+    }
+  });
+}
+
+progressBar();
+
+// custom cursor code
+const crsr = document.querySelector(".crsr")
+const crsrTxt = document.querySelector(".crsr-txt");
+const btns = document.querySelectorAll(".secondary-btn");
+const cards = document.querySelectorAll(".card-explore");
+
+document.addEventListener("mousemove", (e) => {
+  gsap.to(".crsr", {
+    left: e.clientX,
+    top: e.clientY,
+    duration: 0.3,
+    ease: "power2.out"
+  })
+});
+
+cards.forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    crsrTxt.textContent = "Explore";
+    crsr.classList.add("hover");
+  })
+  btn.addEventListener("mouseleave", () => {
+    crsrTxt.textContent = "";
+    crsr.classList.remove('hover');
+  })
+});
+
+btns.forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    crsrTxt.textContent = "Click";
+    crsr.classList.add("hover");
+    gsap.from(crsrTxt, {
+      opacity: 0,
+      x: 10,
+      duration: 0.5
+    })
+  })
+  btn.addEventListener("mouseleave", () => {
+    crsrTxt.textContent = "";
+    crsr.classList.remove('hover');
+  })
+})
+
 // hero & loader animation
 loaderAnimation();
 
@@ -40,25 +98,25 @@ function loaderAnimation() {
     duration: 0.5,
   })
 
-  .from(loaderText, {
-    opacity: 0,
-    y: -40,
-    duration: 0.8,
-    ease: "power2.out"
-  })
+    .from(loaderText, {
+      opacity: 0,
+      y: -40,
+      duration: 0.8,
+      ease: "power2.out"
+    })
 
-  .to(loaderPulse, {
-    width: "100%",
-    duration: 1,
-    ease: "sine.out"
-  })
+    .to(loaderPulse, {
+      width: "100%",
+      duration: 1,
+      ease: "sine.out"
+    })
 
-  .to(loaderDiv, {
-    y: "-100%",
-    opacity: 0,
-    delay: 0.5,
-    duration: 1
-  });
+    .to(loaderDiv, {
+      y: "-100%",
+      opacity: 0,
+      delay: 0.5,
+      duration: 1
+    });
 }
 
 function heroAnimation() {
@@ -112,14 +170,14 @@ function heroAnimation() {
   });
 
   gsap.to(".hero-image-container .floating-card", {
-  y: -20,
-  duration: 2.5,
-  ease: "sine.inOut",
-  repeat: -1,
-  yoyo: true
-});
+    y: -20,
+    duration: 2.5,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true
+  });
 
-featuresAnimation()
+  featuresAnimation()
 }
 
 function featuresAnimation() {
@@ -159,7 +217,7 @@ function featuresAnimation() {
   aboutAnimation();
 }
 
-function aboutAnimation () {
+function aboutAnimation() {
   const aboutTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about",
@@ -176,46 +234,46 @@ function aboutAnimation () {
     ease: "power2.out"
   })
 
-  // Heading
-  .from(".about-heading", {
-    opacity: 0,
-    y: 40,
-    duration: 0.7,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Heading
+    .from(".about-heading", {
+      opacity: 0,
+      y: 40,
+      duration: 0.7,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Text
-  .from(".about-text", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.4")
+    // Text
+    .from(".about-text", {
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.4")
 
-  // Stats (stagger)
-  .to(".about .about-static", {
-    opacity: 1,
-    y: -10,
-    duration: 0.6,
-    stagger: 0.15,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Stats (stagger)
+    .to(".about .about-static", {
+      opacity: 1,
+      y: -10,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Button
-  .from(".about-buttons", {
-    opacity: 0,
-    y: 20,
-    duration: 0.5,
-    ease: "power2.out"
-  }, "-=0.2")
+    // Button
+    .from(".about-buttons", {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: "power2.out"
+    }, "-=0.2")
 
-  // Image (right side)
-  .to(".about-image img", {
-    opacity: 1,
-    scale: 1,
-    duration: 0.8,
-    ease: "power2.out"
-  }, "-=0.6");
+    // Image (right side)
+    .to(".about-image img", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.6");
 
   oralHealthAnimation()
 };
@@ -238,46 +296,46 @@ function oralHealthAnimation() {
     duration: 0.8,
   })
 
-  // Tag
-  .from(".oral-tag", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.5")
+    // Tag
+    .from(".oral-tag", {
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.5")
 
-  // Heading
-  .from(".oral-heading", {
-    opacity: 0,
-    y: 40,
-    duration: 0.7,
-    ease: "power2.out"
-  }, "-=0.4")
+    // Heading
+    .from(".oral-heading", {
+      opacity: 0,
+      y: 40,
+      duration: 0.7,
+      ease: "power2.out"
+    }, "-=0.4")
 
-  // Paragraph
-  .from(".oral-text", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.4")
+    // Paragraph
+    .from(".oral-text", {
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.4")
 
-  // Points (stagger)
-  .from(".oral-point", {
-    opacity: 1,
-    x: 30,
-    duration: 0.5,
-    stagger: 0.15,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Points (stagger)
+    .from(".oral-point", {
+      opacity: 1,
+      x: 30,
+      duration: 0.5,
+      stagger: 0.15,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Button
-  .from(".oral-btn", {
-    opacity: 0,
-    y: 20,
-    duration: 0.5,
-    ease: "power2.out"
-  }, "-=0.2");
+    // Button
+    .from(".oral-btn", {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: "power2.out"
+    }, "-=0.2");
 
   researchAnimation()
 }
@@ -301,22 +359,22 @@ function researchAnimation() {
     ease: "power2.out"
   })
 
-  // Subheading
-  .from(".research-subheading", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Subheading
+    .from(".research-subheading", {
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Cards
-  .to(".research-card", {
-    opacity: 1,
-    scale: 1,
-    stagger: 0.2,
-    duration: 0.8,
-    ease: "power2.out"
-  }, "-=0.2")
+    // Cards
+    .to(".research-card", {
+      opacity: 1,
+      scale: 1,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.2")
 
   productsAnimation();
 }
@@ -340,22 +398,22 @@ function productsAnimation() {
     ease: "power2.out"
   })
 
-  // Subheading
-  .from(".products-subheading", {
-    opacity: 0,
-    y: 25,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Subheading
+    .from(".products-subheading", {
+      opacity: 0,
+      y: 25,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Cards
-  .to(".product-card", {
-    opacity: 1,
-    scale: 1,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "power3.out"
-  }, "-=0.2");
+    // Cards
+    .to(".product-card", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out"
+    }, "-=0.2");
 
   testimonialsAnimation();
 }
@@ -379,22 +437,22 @@ function testimonialsAnimation() {
     ease: "power2.out"
   })
 
-  // Subheading
-  .from(".testimonials-subheading", {
-    opacity: 0,
-    y: 25,
-    duration: .6,
-    ease: "power2.out"
-  }, "-=.3")
+    // Subheading
+    .from(".testimonials-subheading", {
+      opacity: 0,
+      y: 25,
+      duration: .6,
+      ease: "power2.out"
+    }, "-=.3")
 
-  // Cards
-  .to(".testimonial-card", {
-    opacity: 1,
-    scale: 1,
-    duration: 1,
-    stagger: 0.3,
-    ease: "power3.out"
-  }, "-=.2");
+    // Cards
+    .to(".testimonial-card", {
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out"
+    }, "-=.2");
 
   faqAnimation()
 }
@@ -418,22 +476,22 @@ function faqAnimation() {
     ease: "power2.out"
   })
 
-  // Subheading
-  .from(".faq-subheading", {
-    opacity: 0,
-    y: 25,
-    duration: 0.6,
-    ease: "power2.out"
-  }, "-=0.3")
+    // Subheading
+    .from(".faq-subheading", {
+      opacity: 0,
+      y: 25,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.3")
 
-  // Accordion Items
-  .from(".accordion-item", {
-    opacity: 0,
-    y: 60,
-    duration: 0.7,
-    stagger: 0.15,
-    ease: "power3.out"
-  }, "-=0.2");
+    // Accordion Items
+    .from(".accordion-item", {
+      opacity: 0,
+      y: 60,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: "power3.out"
+    }, "-=0.2");
 
   footerAnimation();
 }
@@ -477,7 +535,7 @@ function footerAnimation() {
 }
 
 // geolocation API for the map
-function getUserLocation () {
+function getUserLocation() {
   if (!navigator.geolocation) {
     alert("your brower doesn't support geolocation");
     return;
@@ -490,7 +548,7 @@ function getUserLocation () {
     let map = L.map('map');
     map.setView([latitude, longitude], 16);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+      attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
     L.marker([latitude, longitude]).addTo(map).bindPopup("📍 You are here").openPopup();
@@ -517,6 +575,42 @@ function getUserLocation () {
 }
 
 getUserLocation()
+
+// lenis with the scroll trigger of gsap
+let lenis;
+function smoothScrolling() {
+  lenis = new Lenis({
+    duration: 3,
+    smoothWheel: true,
+    smoothTouch: true,
+  });
+  console.log("lenis is alive")
+
+  // Keep ScrollTrigger updated
+  lenis.on("scroll", ScrollTrigger.update);
+
+  // Connect Lenis to GSAP's ticker
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+  // Remove GSAP lag smoothing
+  gsap.ticker.lagSmoothing(0);
+  
+}
+smoothScrolling();
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const target = link.getAttribute("href");
+
+    lenis.scrollTo(target);
+  });
+});
 
 gsap.utils.toArray(".accordion-item").forEach(item => {
 
