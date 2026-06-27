@@ -1036,3 +1036,30 @@ body.dark .theme-toggle .sun {
     border-color: var(--clr-primary);
     transform: translateY(-5px);
 }
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-lg);
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(.8);
+    transition: var(--transition-fast);
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+}

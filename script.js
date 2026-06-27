@@ -602,6 +602,48 @@ function smoothScrolling() {
 }
 smoothScrolling();
 
+// Back to top
+const backToTop = document.querySelector(".back-to-top");
+
+gsap.set(backToTop, {
+  opacity: 0,
+  y: 20,
+  scale: 0.8,
+  visibility: "hidden"
+});
+
+ScrollTrigger.create({
+  start: 400,
+  end: "max",
+
+  onEnter: () => {
+    gsap.to(backToTop, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      visibility: "visible",
+      duration: 0.4,
+      ease: "back.out(1.7)"
+    });
+  },
+
+  onLeaveBack: () => {
+    gsap.to(backToTop, {
+      opacity: 0,
+      y: 20,
+      scale: 0.8,
+      visibility: "hidden",
+      duration: 0.3
+    });
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  lenis.scrollTo("body", {
+    duration: 3
+  });
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
