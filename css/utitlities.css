@@ -86,7 +86,7 @@
     background: var(--clr-primary);
     color: var(--text);
     border: 1px solid var(--clr-primary);
-    transition: var(--transition-fast)
+    transition: var(--transition-normal)
 }
 
 .secondary-btn:hover {
@@ -94,7 +94,7 @@
 }
 
 .outline-btn {
-    background: transparent
+    background: transparent;
 }
 
 .outline-btn:hover {
