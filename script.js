@@ -697,3 +697,17 @@ gsap.utils.toArray(".research-card").forEach(card => {
     });
   });
 });
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navLinks.forEach(l=>l.classList.remove("activeP"));
+
+link.classList.add("activeP");
+
+});
+
+});

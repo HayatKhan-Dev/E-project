@@ -33,10 +33,31 @@
     margin-bottom: 2rem;
 }
 
+.white-bg {
+    background: white;
+    color: var(--clr-primary);
+    padding: var(--sp-3) var(--sp-5);
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.white-bg:hover 
+{
+    background: transparent;
+    color: white;
+    border-color: var(--clr-primary);
+}
+
 .hero-btns {
-    display: flex;
+    display: flex;  
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-btns button {
+    opacity: 0;
 }
 
 .hero-stats {
@@ -47,6 +68,7 @@
 }
 
 .hero-stats div {
+    opacity: 0;
     background: var(--card);
     border: 1px solid var(--clr-primary);
     padding: 1.25rem 1.75rem;
@@ -120,7 +142,9 @@
     padding: 2.5rem;
     height: 100%;
     text-align: center;
-    transition: 0.4s;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: var(--transition-fast);
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -281,33 +305,127 @@
     padding: 7rem 0;
 }
 
-.research-card {
+.research-cards {
     background: var(--card);
     border-radius: 25px;
     border: 1px solid var(--border);
     padding: 2rem;
     transition: 0.4s;
     height: 100%;
+    opacity: 1;
 }
 
-.research-card:hover {
+.research-cards:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
 }
 
-.research-card h4 {
+.research-cards h4 {
     margin-bottom: 1rem;
 }
 
-.research-card p {
+.research-cards p {
     color: var(--text-muted);
     line-height: 1.8;
 }
 
-.research-card a {
+.research-cards a {
     color: var(--clr-primary);
     text-decoration: none;
     font-weight: 600;
+}
+
+/* OTHER STUFFS */
+.faculty-resources,
+.student-resources,
+.case-studies,
+.faq-section{
+    padding:7rem 0;
+}
+
+.resource-card,
+.student-card,
+.case-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:2rem;
+    text-align:center;
+    height:100%;
+    transition:.35s;
+    box-shadow:var(--shadow-sm);
+}
+
+.resource-card:hover,
+.student-card:hover,
+.case-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+.resource-card i,
+.student-card i{
+    width:75px;
+    height:75px;
+    display:grid;
+    place-items:center;
+    margin:auto;
+    margin-bottom:1.5rem;
+    border-radius:20px;
+    font-size:2rem;
+    background:rgba(14,165,233,.12);
+    color:var(--clr-primary);
+}
+
+.resource-card h4,
+.student-card h3,
+.case-card h3{
+    margin-bottom:1rem;
+    color:var(--text);
+}
+
+.resource-card p,
+.student-card p,
+.case-card p{
+    color:var(--text-muted);
+    line-height:1.7;
+    margin-bottom:1.5rem;
+}
+
+.case-number{
+    display:inline-block;
+    margin-bottom:1rem;
+    padding:.45rem 1rem;
+    border-radius:50px;
+    background:rgba(14,165,233,.12);
+    color:var(--clr-primary);
+    font-weight:600;
+}
+
+.accordion-item{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:1rem;
+    background:var(--card);
+    box-shadow:var(--shadow-sm);
+}
+
+.accordion-button{
+    background:var(--card);
+    color:var(--text);
+    font-weight:600;
+    padding:1.25rem;
+}
+
+.accordion-button:not(.collapsed){
+    background:var(--clr-primary);
+    color:#fff;
+}
+
+.accordion-body{
+    background:var(--card);
+    color:var(--text-muted);
 }
 
 /*=========================================
@@ -347,6 +465,10 @@
     margin: 1.5rem auto 2rem;
     max-width: 650px;
     opacity: 0.9;
+}
+
+.courses {
+    padding: var(--sp-7) 0;
 }
 
 .course-top {
@@ -390,6 +512,38 @@
     transition: 0.35s;
 }
 
+.course-card {
+    background: var(--card);
+    border-radius: 25px;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    opacity: 0;
+    transform: scale(0.80);
+    transition: 0.4s;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+    color: white;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding: 0.65rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+}
+
 .course-card:hover .course-icon {
     transform: rotate(-10deg) scale(1.1);
 }
@@ -408,6 +562,10 @@
 
 .course-progress .progress-bar {
     background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+}
+
+.course-footer button {
+    margin-top: var(--sp-4)
 }
 
 .course-progress small {

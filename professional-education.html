@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/modals.css">
 </head>
 
-<body>
+<body data-page="professional-education">
   <!-- navbar -->
   <header>
     <div class="container nav-bar-container">
@@ -39,48 +39,21 @@
               <li class="nav-item">
                 <a class="nav-link activeP" aria-current="page" href="#hero">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#education" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Education
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">Professional Education</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Patient Education</a>
-                  </li>
-                </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#research" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">Research</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Toothpaste</a></li>
-                  <li><a class="dropdown-item" href="#">Toothbrushes</a></li>
-                  <li><a class="dropdown-item" href="#">Kids Products</a></li>
-                  <li><a class="dropdown-item" href="#">Electric Accessories</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#courses">Courses</a>
               </li>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#products">Products</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Products</a>
-                </li>
-              </ul>
+              <li class="nav-item">
+                <a href="#faculty-resources" class="nav-link">Faculty Resources</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#products" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">Products</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Toothpaste</a></li>
-                  <li><a class="dropdown-item" href="#">Toothbrushes</a></li>
-                  <li><a class="dropdown-item" href="#">Kids Products</a></li>
-                  <li><a class="dropdown-item" href="#">Electric Accessories</a></li>
-                </ul>
+              <li class="nav-item">
+                <a href="#student-resources" class="nav-link">Student Resources</a>
+              </li>
+              <li class="nav-item">
+                <a href="#case-studies" class="nav-link">Case Studies</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
               </li>
             </ul>
 
@@ -101,89 +74,55 @@
 
   <!-- main content -->
    <main>
-    <section class="pro-hero">
-
+    <section class="pro-hero" id="hero">
     <div class="container">
-
       <div class="row align-items-center g-5">
-
         <div class="col-lg-6">
-
           <span class="page-badge">
             Professional Dental Education
           </span>
 
-          <h1>
-            Master Modern Dentistry With
-            Evidence-Based Learning
-          </h1>
+          <h1>Master Modern Dentistry With
+            Evidence-Based Learning</h1>
 
-          <p>
-
-            Learn clinical dentistry, oral diseases,
+          <p>Learn clinical dentistry, oral diseases,
             anatomy, radiology and preventive care through
             structured modules created for students and
-            professionals.
-
-          </p>
+            professionals.</p>
 
           <div class="hero-btns">
-
-            <button class="secondary-btn">
-              Start Learning
-            </button>
-
-            <button class="secondary-btn">
-              Browse Courses
-            </button>
-
+            <button class="secondary-btn">Start Learning</button>
+            <button class="secondary-btn">Browse Courses</button>
           </div>
 
           <div class="hero-stats">
-
             <div>
-
               <h3>120+</h3>
-
               <span>Lessons</span>
-
             </div>
 
             <div>
-
               <h3>50+</h3>
-
               <span>Research Articles</span>
-
             </div>
 
             <div>
-
               <h3>25+</h3>
-
               <span>Learning Modules</span>
-
             </div>
-
           </div>
-
         </div>
 
         <div class="col-lg-6">
-
           <img src="images/professional.png" class="img-fluid hero-image">
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <!-- ================= CATEGORIES ================= -->
 
-  <section class="categories">
+  <section class="categories" id="categories">
 
     <div class="container">
 
@@ -281,7 +220,7 @@
 
   <!-- ================= COURSES ================= -->
 
-  <section class="courses">
+  <section class="courses" id="courses">
 
     <div class="container">
 
@@ -499,7 +438,7 @@
 </section>
   <!-- ================= ROADMAP ================= -->
 
-  <section class="roadmap">
+  <section class="roadmap" id="roadmap">
 
     <div class="container">
 
@@ -559,7 +498,7 @@
 
   <!-- ================= RESEARCH ================= -->
 
-  <section class="latest-research">
+  <section class="latest-research" id="research">
 
     <div class="container">
 
@@ -573,7 +512,7 @@
 
         <div class="col-lg-4">
 
-          <div class="research-card">
+          <div class="research-cards">
 
             <h4>
 
@@ -599,7 +538,7 @@
 
         <div class="col-lg-4">
 
-          <div class="research-card">
+          <div class="research-cards">
 
             <h4>
 
@@ -624,67 +563,402 @@
         </div>
 
         <div class="col-lg-4">
-
-          <div class="research-card">
-
-            <h4>
-
-              Radiology
-
-            </h4>
-
-            <p>
-
-              Modern imaging techniques in dentistry.
-
-            </p>
-
-            <a href="#">
-
-              Read More →
-
-            </a>
-
+          <div class="research-cards">
+            <h4>Radiology</h4>
+            <p>Modern imaging techniques in dentistry.</p>
+            <a href="#">Read More →</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faculty-resources" id="faculty-resources">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="page-badge">Faculty Resources</span>
+            <h2>Teaching Materials For Instructors</h2>
+            <p>
+                Download lecture slides, teaching guides and classroom resources
+                prepared by experienced dental educators.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="resource-card">
+                    <i class="fa-solid fa-file-powerpoint"></i>
+
+                    <h4>Lecture Slides</h4>
+
+                    <p>
+                        Ready-to-use presentations covering dental anatomy,
+                        pathology and preventive care.
+                    </p>
+
+                    <button class="primary-btn">
+                        Download
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="resource-card">
+                    <i class="fa-solid fa-book"></i>
+
+                    <h4>Teaching Guides</h4>
+
+                    <p>
+                        Comprehensive manuals designed for classroom instruction.
+                    </p>
+
+                    <button class="primary-btn">
+                        Download
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="resource-card">
+                    <i class="fa-solid fa-video"></i>
+
+                    <h4>Presentation Videos</h4>
+
+                    <p>
+                        Recorded demonstrations for practical teaching sessions.
+                    </p>
+
+                    <button class="primary-btn">
+                        Watch
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="resource-card">
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h4>Assessment Sheets</h4>
+
+                    <p>
+                        Practical exams, quizzes and evaluation templates.
+                    </p>
+
+                    <button class="primary-btn">
+                        Download
+                    </button>
+                </div>
+            </div>
 
         </div>
 
-      </div>
-
     </div>
+</section>
 
-  </section>
+<section class="student-resources" id="student-resources">
 
-  <!-- ================= CTA ================= -->
+<div class="container">
+
+<div class="section-heading">
+
+<span class="page-badge">
+
+Student Resources
+
+</span>
+
+<h2>
+
+Everything A Student Needs
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="student-card">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h3>Study Notes</h3>
+
+<p>
+
+Revision notes for every dental topic.
+
+</p>
+
+<button class="primary-btn">
+
+Open Notes
+
+</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="student-card">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<h3>PDF Library</h3>
+
+<p>
+
+Reference books and learning documents.
+
+</p>
+
+<button class="primary-btn">
+
+Browse PDFs
+
+</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="student-card">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<h3>Practice Quiz</h3>
+
+<p>
+
+Test your knowledge with quizzes.
+
+</p>
+
+<button class="primary-btn">
+
+Start Quiz
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="case-studies" id="case-studies">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="page-badge">
+
+Clinical Cases
+
+</span>
+
+<h2>
+
+Real Patient Case Studies
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="case-card">
+
+<span class="case-number">
+
+Case #101
+
+</span>
+
+<h3>
+
+Dental Caries
+
+</h3>
+
+<p>
+
+Diagnosis, treatment planning and restoration.
+
+</p>
+
+<button class="primary-btn">
+
+View Case
+
+</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="case-card">
+
+<span class="case-number">
+
+Case #205
+
+</span>
+
+<h3>
+
+Root Canal
+
+</h3>
+
+<p>
+
+Clinical procedures with radiographic evaluation.
+
+</p>
+
+<button class="primary-btn">
+
+View Case
+
+</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="case-card">
+
+<span class="case-number">
+
+Case #308
+
+</span>
+
+<h3>
+
+Periodontal Disease
+
+</h3>
+
+<p>
+
+Treatment and patient follow-up.
+
+</p>
+
+<button class="primary-btn">
+
+View Case
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq-section" id="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+</div>
+
+<div class="accordion" id="faqAccordion">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+
+Who can enroll?
+
+</button>
+
+</h2>
+
+<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Dental students, practitioners and healthcare professionals.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+
+Do I receive a certificate?
+
+</button>
+
+</h2>
+
+<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Yes, after completing all required modules.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
   <section class="education-cta">
-
     <div class="container">
-
       <div class="cta-box">
-
-        <h2>
-
-          Ready To Become A Better Dental Professional?
-
-        </h2>
-
-        <p>
-
-          Start your structured dental education today.
-
-        </p>
-
-        <button class="primary-btn">
-
-          Start Learning
-
-        </button>
-
+        <h2>Ready To Become A Better Dental Professional?</h2>
+        <p>Start your structured dental education today.</p>
+        <button class=" white-bg">Start Learning</button>
       </div>
-
     </div>
-
   </section>
 
    </main>
@@ -743,7 +1017,11 @@
 
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="professional.js"></script>
 </body>
 
 </html>

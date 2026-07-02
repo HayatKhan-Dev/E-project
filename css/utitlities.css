@@ -202,3 +202,7 @@
         var(--clr-primary)
     );
 }
+
+.nav-link.activeP {
+    color: var(--clr-primary);
+}
